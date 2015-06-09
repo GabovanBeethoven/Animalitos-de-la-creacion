@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Los Animales</title>
+		<link href="jquery-mobile/estilos.css" rel="stylesheet" />
+		<link href="jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+		<style type="text/css">
+			#page div h1 {
+				font-weight: bold;
+				font-size: 48px;
+			}
+
+			.tit1{
+				font-family: "Old English Text MT";
+				font-size: 36pt;
+				font-weight: bold;
+				text-align: center;
+				color:#900;
+				background-image:url(Imagenes/Fondo/100_4553.JPG);
+			}
+		</style>
+		<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+		<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+		<script src="jquery-mobile/acciones.js"></script>
+		<script src="phonegap.js"></script>
+	</head> 
+	<body> 
+    
+    	<!--Cargando sonidos-->
+        <audio id="caballo"><source src="audio/Animales_domesticos/Caballo.mp3"></audio>
+  		<audio id="gallina"><source src="audio/Animales_domesticos/Gallinas.mp3"></audio>
+        <audio id="Gallo"><source src="audio/Animales_domesticos/Gallo.mp3"></audio>
+        <audio id="gatito"><source src="audio/Animales_domesticos/Gato.mp3"></audio>
+        <audio id="Perro"><source src="audio/Animales_domesticos/Perros.mp3"></audio>
+        <audio id="Burro"><source src="audio/Animales_domesticos/Burro.mp3"></audio>
+  <!----------------------------------------------------------------------------------------->
+        <audio id="Aguila"><source src="audio/Animales_salvajes/Aguila.mp3"></audio>
+        <audio id="Gorila"><source src="audio/Animales_salvajes/GORILA.mp3"></audio>
+        <audio id="Leon"><source src="audio/Animales_salvajes/León.mp3"></audio>
+        <audio id="Lobo"><source src="audio/Animales_salvajes/Lobo.mp3"></audio>
+        <audio id="Oso"><source src="audio/Animales_salvajes/Oso.mp3"></audio>
+        <audio id="Pantera"><source src="audio/Animales_salvajes/Pantera.mp3"></audio>
+        
+    	<!--Pagina de inicio-->
+		<div data-role="page" id="page">
+			<div data-role="header" class="ui-corner-top ui-overlay-shadow ui-header ui-bar-f" role="banner" 
+            data-position="fixed">             
+				<h1>Los Animales</h1>
+				<div>
+                	<div>
+                    	<a href="javascript:window.close();" data-role="button" data-theme="b" data-icon="delete" 
+                        data-transition="pop" style="opacity:.9">
+                       		Close
+                        </a>
+                    </div>
+                </div>              	
+			</div>
+			<div data-role="content" class="tit1">	
+				<div align="center" data-role="controlgroup" class="ui-bar-b">
+			       	<div align="center">Escoja los animales que desea ver</div>             	
+					<a href="#page2" data-icon="arrow-r" data-iconpos="right" data-role="button" data-transition="flip" 
+                    style="width: 50%; font-size: 24px; opacity:.9;">Animales<br> domésticos</a>
+		     	    <a href="#page3" data-icon="arrow-r" data-iconpos="right" data-role="button" data-transition="flip" 
+                    style="width: 50%; font-size: 24px; opacity:.9;">Animales<br> salvajes</a>
+				</div>
+                <p></p><br><br>
+			</div>
+		</div>
+		<!--animales domesticos-->
+		<div data-role="page" id="page2">
+			<div data-role="header" style="width:100%" align="center" class="ui-bar-a">
+		    	Animales domésticos
+		    	<div><a href="#inicio" data-role="button" data-theme="b" data-icon="back" data-rel="dialog" data-transition="flip"> Regresar</a></div>
+		    	
+                <p><img src="Imagenes/Animales domesticos/Caballo.jpg" width="200" height="150" data-role="button" onClick="caballo.play()" value="play">&nbsp;
+		        <img src="Imagenes/Animales domesticos/Gallina.jpg" width="200" height="150" data-role="button" onClick="gallina.play()" value="play"></p>	
+		        <p><img src="Imagenes/Animales domesticos/Gallo.jpg" width="200" height="150" data-role="button" onClick="Gallo.play()" value="play">&nbsp;
+		        <img src="Imagenes/Animales domesticos/gatito.jpg" width="200" height="150" data-role="button" onClick="gatito.play()" value="play"></p>	
+		        <p><img src="Imagenes/Animales domesticos/Perro.jpg" width="200" height="150" data-role="button" onClick="Perro.play()" value="play">&nbsp;	
+		        <img src="Imagenes/Animales domesticos/Burro.jpg" width="200" height="150" data-role="button" onClick="Burro.play()" value="play"></p>
+			</div>
+		</div>
+
+		<div data-role="page" id="page3">
+			<div data-role="header" style="width:100%" align="center" class="ui-bar-a">
+		    	Animales salvajes
+	    		<div><a href="#inicio2" data-role="button" data-theme="b" data-icon="back" data-rel="dialog" data-transition="flip"> Regresar</a></div>
+                
+		    	<p><img src="Imagenes/Animales salvajes/Aguila.jpg" width="200" height="150" data-role="button" onClick="Aguila.play()" value="play">&nbsp;
+		        <img src="Imagenes/Animales salvajes/Gorila.png" width="200" height="150" data-role="button" onClick="Gorila.play()" value="play"></p>	
+		        <p><img src="Imagenes/Animales salvajes/Leon.jpg" width="200" height="150" data-role="button" onClick="Leon.play()" value="play">&nbsp;
+		        <img src="Imagenes/Animales salvajes/Lobo.jpg" width="200" height="150" data-role="button" onClick="Lobo.play()" value="play"></p>	
+		        <p><img src="Imagenes/Animales salvajes/Oso.jpg" width="200" height="150" data-role="button" onClick="Oso.play()" value="play">&nbsp;
+		        <img src="Imagenes/Animales salvajes/Pantera.jpg" width="200" height="150" data-role="button" onClick="Pantera.play()" value="play"></p>
+			</div>
+		</div>
+        
+        <div data-role="page" id="inicio">
+			<div data-role="header" data-theme="b">            
+				<h1>Regresar a la página de inicio</h1>    
+			</div>
+            <div data-role="content" data-theme="a">
+            	<p>¿Realmente desea regresar a la página de inicio?</p>
+                <a href="#page" data-role="button" data-theme="b" data-inline="true">Si</a>
+                <a href="#page2" data-role="button" data-theme="b" data-inline="true">No</a>
+            </div>
+		</div>
+        
+        <div data-role="page" id="inicio2">
+			<div data-role="header" data-theme="b">            
+				<h1>Regresar a la página de inicio</h1>    
+			</div>
+            <div data-role="content" data-theme="a">
+            	<div data-role="controlgroup" data-type="horizontal">
+            	<p>¿Realmente desea regresar a la página de inicio?</p>
+                <a href="#page" data-role="button" data-theme="b" data-inline="true">Si</a>
+                <a href="#page3" data-role="button" data-theme="b" data-inline="true">No</a>
+                </div>
+            </div>
+		</div>
+	</body>
+</html>
